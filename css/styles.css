@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  color: green;
+}
+
+.bg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+
+div.bg:active + div.text1 {
+  display: block;
+  visibility: visible;
+
+}
+
+div.bg:active {
+  display: none;
+}
+
+div.text1 {
+  text-align: center;
+  visibility: hidden;
+  display: none;
+}
+
+div.text1:active {
+    visibility: hidden;
+}
+
+.clicky {
+  text-align: center;
+}
+
+table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+td {
+  text-align: center;
+}
+
+.demo {
+  text-align: center;
+}
