@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+h1::before {
+  content: "I think I understand this now";
+  display: block;
+  color: salmon;
+}
+
+h1::after {
+  content: "Pseudo-Elements are wonderful!";
+  display: block;
+  color: brown;
+}
+
 .title {
   font-size: 50px;
   text-align: center;
@@ -13,9 +25,27 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  position: relative;
 }
 
+img {
+  float: left;
+  height: 250px;
+  width: 250px;
+  display: block;
+  position: absolute;
+  margin: 30px;
+}
 
+.pic1 {
+  display: inline-block;
+  margin-left: -210px;
+}
+
+.pic2 {
+  display: inline-block;
+  margin-left: -500px;
+}
 
 div.bg:active + div.text1 {
   display: block;
@@ -53,3 +83,60 @@ td {
 .demo {
   text-align: center;
 }
+
+.rel-box {
+  position: relative;
+  margin-top: 300px;
+  border-style: solid;
+  border-width: thick;
+  border-color: green;
+  height: 500px;
+  width: 500px
+}
+
+.rel-box::after {
+  position: relative;
+  margin-top: 300px;
+  border-style: dashed;
+  border-width: thin;
+  border-color: red;
+  height: 500px;
+  width: 500px
+}
+
+.panel {
+  position: absolute;
+  border-style: solid;
+  border-width: medium;;
+  border-color: orange;
+  margin-left: 80px;
+  margin-top: 150px;
+}
+
+.floaties {
+  float: left;
+}
+
+.floatin {
+  display: inline-block;
+  border-style: groove;
+  border-color: lightblue;
+  border-width: 10px;
+  height: auto;
+  max-width: 100px;
+  text-align: center;
+}
+.clearfix::after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: "";
+     clear: both;
+     height: 0;
+     }
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
