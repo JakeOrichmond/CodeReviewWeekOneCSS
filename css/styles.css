@@ -34,7 +34,8 @@ img {
   width: 250px;
   display: block;
   position: absolute;
-  margin: 30px;
+  top: 30px;
+  left: 800px;
 }
 
 .pic1 {
